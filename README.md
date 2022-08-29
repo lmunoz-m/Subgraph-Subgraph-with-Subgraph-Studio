@@ -38,3 +38,9 @@ graph codegen && graph build
 
 6. Open src mapping.ts next we'll import references to the tokenUriUpdated and transfer events as well as a reference to the token contract from the code that was generated for us by the cli. 
 These imports will give us type safety as well as functions that will allow us to interact directly with the smart contract. Next we'll import the token and the user from the schema, these imports will allow us to interact with the graph node the interactions that we'll be using are facilitated by the graph typescript library. The graph typescript library gives us the following, an api for working with smart contracts events, blocks transactions and smart contract values, a store api to load and save entities from and to the graph node, store a log api to log and debug messages to the graph node output in the graph explorer and ipfs api to load files from ipfs a json api to parse json data and finally a crypto api to use cryptographic functions and low level primitives to translate between different type systems such as ethereum json graphql and assembly script.
+
+6. Once all the above is done, the only thing left to do is to deploy the subgraph and publish it.
+```js
+graph deploy --studio zora-subgraph-test
+```
+7. Publish it in Subgraph studio web.
